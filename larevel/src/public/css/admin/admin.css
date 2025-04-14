@@ -1,0 +1,50 @@
+body {
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+    background-color: #f8f5f2;
+    color: #937464;
+    margin: 0;
+}
+
+/* 見出し */
+h2 {
+    text-align: center;
+}
+
+main {
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-right: 1px solid #333;
+    border-left: 1px solid #333;
+}
+
+
+th,
+td {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+th {
+    background-color: burlywood;
+    color: white;
+
+}

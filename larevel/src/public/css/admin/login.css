@@ -1,0 +1,95 @@
+body {
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+    background-color: #f8f5f2;
+    color: #937464;
+    margin: 0;
+}
+
+/* 見出し */
+h2 {
+    text-align: center;
+}
+
+.form {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    padding-top: 90px;
+    background-color: white;
+    outline: solid 1px rgb(197, 180, 171);
+    border-radius: 5px;
+}
+
+.form__input {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 40px;
+}
+
+.form__btn {
+    text-align: center;
+    margin-top: 90px;
+}
+
+label {
+    margin-left: 24%;
+    font-size: 22px;
+}
+
+input {
+    width: 50%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color: #f5f1ee;
+    border: none;
+    color: #937464;
+}
+
+/*入力時に茶色枠*/
+input:focus {
+    outline: solid 2px rgb(186, 166, 155);
+}
+
+::placeholder {
+    color: #b8b4b3;
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+}
+
+button {
+    font-size: 17px;
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+    color: #ffffff;
+    background-color: #937464;
+    padding: 7px 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: #937464;
+    background-color: #ffffff;
+    border: 2px solid #937464;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 0.7px solid rgb(202, 184, 175);
+}
+
+main {
+    padding: 0% 15%;
+}
+
+.error {
+    color: rgb(212, 27, 27);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}

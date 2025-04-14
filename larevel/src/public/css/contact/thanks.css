@@ -1,0 +1,61 @@
+body {
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+    background-color: white;
+    color: #937464;
+    margin: 0;
+    padding: 0% 15%;
+}
+
+.box {
+    margin-top: 30%;
+}
+
+.box__thanks {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.box__btn,
+.box__thanks {
+    text-align: center;
+}
+
+.box__btn {
+    font-size: 17px;
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+    padding: 7px 13px;
+    border: none;
+    border-radius: 5px;
+    background-color: #937464;
+    border: 2px solid #937464;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.box__btn:hover {
+    background-color: #ffffff;
+    border: 2px solid #937464;
+}
+
+a:hover {
+    color: #937464;
+}
+
+.thankyou {
+content: '背景テキスト';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300px;
+    color: rgba(209, 201, 173, 0.3);
+    z-index: -1;
+    white-space: nowrap;
+}

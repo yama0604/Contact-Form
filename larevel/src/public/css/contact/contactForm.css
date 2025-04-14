@@ -1,0 +1,183 @@
+body {
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+    background-color: white;
+    color: #937464;
+    margin: 0;
+}
+
+/* 見出し */
+h2 {
+    text-align: center;
+}
+
+main {
+    padding: 0% 15%;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 0.7px solid rgb(195, 171, 159);
+}
+
+/* 各行（ラベル + 入力群）を横並び */
+.form__row {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 25px;
+}
+
+/* ラベル側 */
+label {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    font-size: 16px;
+}
+
+/* 必須アスタリスク */
+.required {
+    color: rgb(207, 8, 8);
+    font-size: 13px;
+    margin-left: 4px;
+}
+
+/* 入力欄共通設定 */
+input,
+select,
+textarea {
+    font-size: 16px;
+    color: #937464;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f2ece7;
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+    box-sizing: border-box;
+}
+
+/* アクティブ時の枠 */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: solid 2px rgb(186, 166, 155);
+}
+
+/* 入力欄サイズ指定 */
+.form__row--input1,
+textarea {
+    width: 100%;
+}
+
+.form__row--select,
+textarea {
+    width: 50%;
+}
+
+/* お名前（姓・名）欄 */
+.form__row--group {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__name--group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form__last--name,
+.form__first--name {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 電話番号 */
+.form__tel--group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.form__tel--input {
+    width: 32%;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 1.2;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.form__row--input3 {
+    width: 32%;
+    padding: 5px 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* ラジオボタン */
+.form__row--radio {
+    accent-color: #937464;
+}
+
+/* 性別ラジオボタン：中央揃え＋間隔 */
+.form__radio--group {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 5px;
+}
+
+/* テキストエリア */
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* エラーメッセージ */
+.error,
+.form__error {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ボタン */
+.form__row--btn {
+    text-align: center;
+    margin-top: 15px;
+}
+
+button {
+    font-size: 17px;
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+    color: #ffffff;
+    background-color: #937464;
+    padding: 7px 13px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #937464;
+    background-color: #ffffff;
+    border: 2px solid #937464;
+}
+
+/* プレースホルダー */
+::placeholder {
+    color: #b8b4b3;
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+}
+
+

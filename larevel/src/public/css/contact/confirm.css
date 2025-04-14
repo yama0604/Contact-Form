@@ -1,0 +1,100 @@
+body {
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+    background-color: white;
+    color: #937464;
+    margin: 0;
+}
+
+/* 見出し */
+h2 {
+    text-align: center;
+}
+
+table {
+    border: 1px solid #efeded;
+    width: 100%;
+}
+
+th {
+    color: #fafafa;
+    background-color: #927567;
+    width: 30%;
+    border: 1px solid #ddd;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+td {
+    background-color: #fafafa;
+    width: 100%;
+    border: 1px solid #927567;
+    padding-left: 20px;
+}
+
+input {
+    background-color: #fafafa;
+    border: none;
+    font-size: 16px;
+    color: #927567;
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+}
+
+button {
+    font-size: 17px;
+    font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
+    padding: 7px 50px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px 30px;
+}
+
+.form__btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form__btn,
+.form__btn--send,
+.form__btn--rtn {
+    margin-right: 30px;
+}
+
+.form__btn--send {
+    color: #ffffff;
+    background-color: #937464;
+    border: 2px solid #937464;
+}
+
+.form__btn--send:hover {
+    color: #937464;
+    background-color: #ffffff;
+    border: 2px solid #937464;
+}
+
+.form__btn--rtn {
+    color: #937464;
+    background-color: #ffffff;
+    border: 2px solid #937464;
+}
+
+.form__btn--rtn:hover {
+    color: #ffffff;
+    background-color: #937464;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 0.7px solid rgb(202, 184, 175);
+}
+
+main {
+    padding: 0% 15%;
+}
