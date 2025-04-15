@@ -1,8 +1,36 @@
 body {
     font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
-    background-color: #f8f5f2;
+    background-color: white;
     color: #937464;
     margin: 0;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 0.7px solid rgb(202, 184, 175);
+}
+
+.login-link {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 14px;
+    color: #937464;
+    background-color: #f5f1ee;
+    padding: 4px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    border: 1px solid #d6cfc9;
+}
+
+.login-link:hover {
+    background-color: #ffffff;
+    border-color: #937464;
 }
 
 /* 見出し */
@@ -19,8 +47,6 @@ main {
 .search {
     display: flex;
     justify-content: space-between;
-    margin-right: 15%;
-    margin-left: 15%;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -28,15 +54,15 @@ main {
 table {
     width: 100%;
     border-collapse: collapse;
-    border-right: 1px solid #333;
-    border-left: 1px solid #333;
+    border-right: 1px solid #cecccb;
+    border-left: 1px solid #cecccb;
 }
 
 
 th,
 td {
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    border-top: 1px solid #cecccb;
+    border-bottom: 1px solid #cecccb;
     text-align: left;
     padding-left: 10px;
     padding-top: 8px;
@@ -44,7 +70,7 @@ td {
 }
 
 th {
-    background-color: burlywood;
+    background-color: #75665f;
     color: white;
 
 }

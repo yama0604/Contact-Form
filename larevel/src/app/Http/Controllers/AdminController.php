@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdminResisterRequest;
 use App\Http\Requests\AdminLoginRequest;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -29,12 +30,18 @@ class AdminController extends Controller
         return view('admin/login');
     }
 
-    // ログイン
-    public function loginFnc(AdminLoginRequest $request)
+    // Fortifyを使用したログイン（フォームリクエストあり）
+    public function customLogin(AdminLoginRequest $request)
     {
-        $user = $request->only(['email', 'password']);
-        // User::find($user); //※＃＃＃＃ログイン機能＃＃＃＃＃※
+        $credentials = $request->only('email', 'password');
 
-        return view('admin/admin'); //※＃＃＃＃管理画面へ遷移するよう変更＃＃＃＃＃※
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/admin'); // ログイン成功時の遷移先
+        }
+
+        return back()->withErrors([
+            'email' => '認証情報が正しくありません。',
+        ])->onlyInput('email');
     }
 }

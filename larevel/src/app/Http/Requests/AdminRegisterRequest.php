@@ -2,21 +2,28 @@
 
 namespace App\Http\Requests;
 
-use Laravel\Fortify\Http\Requests\LoginRequest as FortifyLoginRequest;
+use Illuminate\Foundation\Http\FormRequest;
 
-class AdminLoginRequest extends FortifyLoginRequest
+class AdminRegisterRequest extends FormRequest
 {
-    public function rules()
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    public function rules(): array
     {
         return [
+            'name'     => 'required|string|max:255',
             'email'    => 'required|email|max:255|unique:users',
             'password' => 'required|string|min:8',
         ];
     }
 
-    public function messages()
+    public function messages(): array
     {
         return [
+            'name.required'     => 'お名前を入力してください',
             'email.required'    => 'メールアドレスを入力してください',
             'email.email'       => 'メールアドレスは「ユーザー名@ドメイン」形式で入力してください',
             'email.unique'      => 'メールアドレスを入力してください',

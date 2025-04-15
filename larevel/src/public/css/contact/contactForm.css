@@ -180,4 +180,7 @@ button:hover {
     font-family: 'YuMincho', 'Hiragino Mincho ProN', serif;
 }
 
-
+/* 入力欄の水色網掛け防止 */
+.filled {
+    background-color: #deeafd;
+}

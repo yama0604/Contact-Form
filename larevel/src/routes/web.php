@@ -22,10 +22,11 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [ContactController::class, 'contactForm']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::post('/thanks', [ContactController::class, 'thanks']);
-//Route::post('/register', [RegisteredUserController::class, 'store']);
-Route::get('/login', [AdminController::class, 'login']);
-//Route::post('/create', [AdminController::class, 'create']);
-Route::post('/loginFnc', [AdminController::class, 'loginFnc']);
+Route::get('/thanks', function () {
+    return view('contact.thanks'); // thanks.blade.php のビュー
+});
+Route::get('/login', [AdminController::class, 'login'])->name('login');
+
 
 
 
@@ -33,3 +34,6 @@ Route::post('/loginFnc', [AdminController::class, 'loginFnc']);
 // 不要↓
 // Route::get('/', [ContactFormController::class, 'contactForm']);
 // Route::get('/confirm', [ContactFormController::class, 'contactConfirm']);
+//Route::post('/register', [RegisteredUserController::class, 'store']);
+//Route::post('/create', [AdminController::class, 'create']);
+//Route::post('/loginFnc', [AdminController::class, 'loginFnc']);

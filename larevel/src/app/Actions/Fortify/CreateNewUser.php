@@ -2,34 +2,33 @@
 
 namespace App\Actions\Fortify;
 
+use App\Http\Requests\AdminRegisterRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class CreateNewUser implements CreatesNewUsers
 {
-    use PasswordValidationRules;
-
-    /**
-     * Validate and create a newly registered user.
-     *
-     * @param  array<string, string>  $input
-     */
     public function create(array $input): User
     {
-        Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8'],
-        ])->validate();
 
-        return User::create([
-            'name' => $input['name'],
-            'email' => $input['email'],
+        App::make(AdminRegisterRequest::class)->validateResolved();
+
+        $user = User::create([
+            'name'     => $input['name'],
+            'email'    => $input['email'],
             'password' => Hash::make($input['password']),
         ]);
-    }
 
+        Auth::logout();
+        Session::invalidate();
+        Session::regenerateToken();
+
+        session()->flash('redirect_from_register', true);
+
+        return $user;
+    }
 }

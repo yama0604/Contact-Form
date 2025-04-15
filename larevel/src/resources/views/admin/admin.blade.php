@@ -6,32 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>アカウント登録</title>
-    <link rel="stylesheet" href="{{ asset('css/admin/register.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/admin/admin.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
 </head>
 
 <body>
   <header>
     FashionablyLate
-    <a href="/login" class="login-link">login</a>
+    <a href="/logout" class="login-link">logout</a>
   </header>
   <main>
-    	<h2>Admin</h2>
-	<div class="search">
-		<input type="text">
-		<select name="pets"></select>
-		<select name="pets"></select>
-		<select name="pets"></select>
-		<input type="submit">
-		<input type="submit">
-	</div>
-	<div class="search">
-		<input type="submit">
-		<input type="submit">
-	</div>
-		
-	</div>
-	<main>
+    <h2>Admin</h2>
+    <div class="search">
+      <input type="text">
+      <select name="pets"></select>
+      <select name="pets"></select>
+      <select name="pets"></select>
+      <input type="submit">
+      <input type="submit">
+    </div>
+    <div class="search">
+      <input type="submit">
+      <input type="submit">
+    </div>
 		<table>
 		  <tr>
 		    <th>お名前</th>

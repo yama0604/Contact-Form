@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Laravel\Fortify\Http\Requests\LoginRequest;
+use App\Http\Requests\AdminLoginRequest;
 
 class AppServiceProvider extends ServiceProvider
 {
