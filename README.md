@@ -1,42 +1,28 @@
-#
+#　アプリケーション名
+お問い合わせフォーム
 
 ## 環境構築
-
-### Docker ビルド
-
-#### 1. git clone リンク
-
-2. docker-compose up -d -build
-   ＊MySQL は、OS によって起動しない場合があるのでそれぞれの PC に合わせて docker-compose.yml ファイルを編集してください。
-   Laravel 環境構築
-1. docker-compose exec php bash
-1. composer install
-   3..env.example ファイルから、env を作成し、環境変数を変更
-1. php artisan key:generate
-1. php artisan migrate
-1. php artisan db:seed
-   使用技術。
-   • PHP 8.0
-   • Laravel 10.0
-   • MySQL 8.0
-   URL &
-   ・開発環境：http://localhost/
-   • phpMyAdmin : http://localhost:8080/
-
-# お問い合わせフォーム。
-
-## 環境構築
-
-- Docker のビルドからマイグレーション、シーディングまでを記述する
+- Dockerイメージのビルドとコンテナの起動
+- cp .env.example .env
+- php artisan key:generate
+- docker-compose exec php bash
+- php artisan migrate
+- php artisan db:seed
 
 ## 使用技術(実行環境)
+- PHP 8.3.20
+- Laravel 8.83.2
+- MySQL 8.0.26
 
-- 例) Laravel 8.x(言語やフレームワーク、バージョンなどが記載されていると良い)
-
-## ER 図
-
-< - - - 作成した ER 図の画像 - - - >
+## ER図
+/Users/y/root/Contact-Form/ER.dio
 
 ## URL
+- お問い合わせフォーム入力ページ: http://localhost/
+- お問い合わせフォーム確認ページ: http://localhost/confirm
+- サンクスページ: http://localhost/thanks
+- ユーザ登録ページ: http://localhost/register
+- ログインページ: http://localhost/loginogin
+- 管理画面: http://localhost/admin
 
-- 例) 開発環境：http://localhost/
+
