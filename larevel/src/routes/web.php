@@ -22,9 +22,7 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [ContactController::class, 'contactForm']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::post('/thanks', [ContactController::class, 'thanks']);
-Route::get('/thanks', function () {
-    return view('contact.thanks'); // thanks.blade.php のビュー
-});
+Route::get('/register', [AdminController::class, 'register'])->name('register');
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 
 
